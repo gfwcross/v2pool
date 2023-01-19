@@ -1,0 +1,1 @@
+{"run_type":"client","local_addr":"127.0.0.1","local_port":65432,"remote_addr":"uk1.trojanvh.xyz","remote_port":80,"password":["b640d791-ff83-4300-b509-c2a02f97f167"],"ssl":{"verify":true,"verify_hostname":true,"sni":"uk1.trojanvh.xyz"},"tcp":{"reuse_port":true}}

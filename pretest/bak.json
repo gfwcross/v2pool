@@ -1,0 +1,83 @@
+[
+    {
+      "id": 0,
+      "remarks": "pojiezhiyuanjun/freev2",
+      "site": "https://github.com/pojiezhiyuanjun/freev2",
+      "url": "https://raw.githubusercontent.com/pojiezhiyuanjun/freev2/master/0119.txt",
+      "update_method": "change_date",
+      "enabled": true
+    },
+    {
+      "id": 1,
+      "remarks": "freefq/free",
+      "site": "https://github.com/freefq/free",
+      "url": "https://raw.githubusercontent.com/freefq/free/master/v2",
+      "update_method": "auto",
+      "enabled": true
+    },
+    {
+      "id": 2,
+      "remarks": "ssrsub/ssr",
+      "site": "https://github.com/ssrsub/ssr",
+      "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/V2Ray|https://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub|https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub|https://raw.githubusercontent.com/ssrsub/ssr/master/trojan",
+      "update_method": "auto",
+      "enabled": true
+    },
+    {
+      "id": 3,
+      "remarks": "Jsnzkpg/Jsnzkpg",
+      "site": "https://github.com/Jsnzkpg/Jsnzkpg",
+      "url": "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg",
+      "update_method": "auto",
+      "enabled": true
+    },
+    {
+      "id": 4,
+      "remarks": "ermaozi/get_subscribe",
+      "site": "https://github.com/ermaozi/get_subscribe",
+      "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+      "update_method": "auto",
+      "enabled": true
+    },
+    {
+      "id": 5,
+      "remarks": "changfengoss",
+      "site": "https://github.com/ronghuaxueleng/get_v2",
+      "url": "https://raw.githubusercontent.com/ronghuaxueleng/get_v2/main/pub/combine.yaml",
+      "update_method": "auto",
+      "enabled": true
+    },
+    {
+      "id": 6,
+      "remarks": "Pawdroid/Free-servers",
+      "site": "https://github.com/Pawdroid/Free-servers",
+      "url": "https://shadowshare.v2cross.com/publicserver/servers/temp/6etNgGmDo0kilQJq",
+      "update_method": "page_release",
+      "enabled": true
+    },
+    {
+      "id": 7,
+      "remarks": "kxswa/k",
+      "site": "https://github.com/kxswa/k",
+      "url": "https://raw.githubusercontent.com/kxswa/k/k/v2ray",
+      "update_method": "auto",
+      "enabled": true
+    },
+    {
+      "id": 8,
+      "remarks": "Nodefree.org",
+      "site": "https://github.com/Fukki-Z/nodefree",
+      "url": "https://nodefree.org/dy/202212/20221231.txt",
+      "update_method": "change_date",
+      "enabled": true
+    },
+    {
+      "id": 9,
+      "remarks": "ClashNode",
+      "site": "https://clashnode.com/f/freenode",
+      "url": "https://clashnode.com/wp-content/uploads/2023/01/20230119.txt",
+      "update_method": "change_date",
+      "enabled": true
+    }
+  ]
+  
