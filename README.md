@@ -8,9 +8,17 @@
 
 ### 节点 & 订阅
 
-项目仍在开发中。
+项目仍在开发中。您可以自己下载源代码运行，获取高速节点。
 
 -----
+
+### 速度测试
+
+<img src="https://i.328888.xyz/2023/01/20/OZvid.jpeg#pic_center =200x" alt="speed" style="zoom: 50%;" />
+
+<center>环境：浙江电信 300Mbps</center>
+
+------
 
 ### 节点来源
 
@@ -33,4 +41,4 @@
 - 本项目的灵感来源：[aiirobyte/TopFreeProxies](https://github.com/aiirobyte/TopFreeProxies)
 - 关联项目：[LiteSpeedTest](https://github.com/xxf098/LiteSpeedTest) | [StairSpeedTest](https://github.com/tindy2013/stairspeedtest-reborn) | [SubConverter](https://github.com/tindy2013/subconverter)
 - 关联 API：[ip-api.com](https://ip-api.com/) | [sub.v1.mk](https://sub.v1.mk)
-- **作者本人为中学学生在读，日常时间不足。会尽量在假期保持更新！**
+- **作者本人中学在读，忙于学业。会尽量在假期保持更新！**
