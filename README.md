@@ -14,9 +14,7 @@
 
 ### 速度测试
 
-<img src="https://i.328888.xyz/2023/01/20/OZvid.jpeg#pic_center =200x" alt="speed" style="zoom: 50%;" />
-
-<center>环境：浙江电信 300Mbps</center>
+[![OZPXa.md.jpeg](https://i.328888.xyz/2023/01/20/OZPXa.md.jpeg)](https://imgloc.com/i/OZPXa)
 
 ------
 
