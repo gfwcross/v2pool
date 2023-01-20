@@ -12,6 +12,7 @@ import speedtest
 import share
 import requests
 import configparser
+import os
 
 def speedtest_runner():
     if config.get("Preferences", "Speedtest") == "False":
@@ -131,12 +132,17 @@ if __name__ == '__main__':
     console.print("运营商：[bold red]%s[/bold red]" % info['isp'])
 
     running = share.transfersh('./running.txt')
-    good    = share.transfersh('./good.txt')
-    delay   = share.transfersh('./low_delay.txt')
-    result  = share.transfersh('./result.json')
     console.print("上传所有可用节点 ==> [bold red]%s[/bold red]"%running)
+    good    = share.transfersh('./good.txt')
     console.print("上传速度优秀节点 ==> [bold red]%s[/bold red]"%good)
+    delay   = share.transfersh('./low_delay.txt')
     console.print("上传延迟优秀节点 ==> [bold red]%s[/bold red]"%delay)
+    result  = share.transfersh('./result.json')
     console.print("上传测速结果文件 ==> [bold red]%s[/bold red]"%result)
 
-    share.generatejson(running, good, delay, result, "...", info['regionName'] + info['isp'])
+    sh = share.generatejson(running, good, delay, result, "...", info['regionName'] + info['isp'])
+    status = share.uploadFile("./%s"%sh)
+    if (status):
+        console.print("已生成分享链接到云端，感谢您的贡献！")
+    else:
+        console.print("上传失败，您仍然可以使用 transfer.sh 链接订阅。")
