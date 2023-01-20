@@ -31,6 +31,6 @@
 ### 鸣谢 & 更多
 
 - 本项目的灵感来源：[aiirobyte/TopFreeProxies](https://github.com/aiirobyte/TopFreeProxies)
-- 关联项目：[LiteSpeedTest](https://github.com/xxf098/LiteSpeedTest) | [StairSpeedTest][https://github.com/tindy2013/stairspeedtest-reborn] | [SubConverter](https://github.com/tindy2013/subconverter)
+- 关联项目：[LiteSpeedTest](https://github.com/xxf098/LiteSpeedTest) | [StairSpeedTest](https://github.com/tindy2013/stairspeedtest-reborn) | [SubConverter](https://github.com/tindy2013/subconverter)
 - 关联 API：[ip-api.com](https://ip-api.com/) | [sub.v1.mk](https://sub.v1.mk)
 - **作者本人为中学学生在读，日常时间不足。会尽量在假期保持更新！**
