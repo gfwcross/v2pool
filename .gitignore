@@ -2,12 +2,19 @@
 *.log
 logs/
 
+# results
+low_delay.txt
+good.txt
+running.txt
+out.json
+
+# auth token
+auth_token
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
 
 # C extensions
 *.so

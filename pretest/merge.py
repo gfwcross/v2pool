@@ -28,7 +28,7 @@ def read_links():
 
     # 更新 json 文件
     with open('./pretest/config.json', 'w') as f:
-        json.dump(conf, f)
+        json.dump(conf, f, indent = 4)
 
     return links
 
