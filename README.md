@@ -1,8 +1,14 @@
 ## v2pool: 优质节点自动筛选
 
-**原理：合并网络上的订阅链接，对每个节点进行 Google Ping 测试，筛选出可连接的节点。对这些节点进行速度测试，择优选出。本项目目前支持的节点协议有：*SS*, *SSR*, *vmess*, *trojan*。**
+*原理：合并网络上的订阅链接，对每个节点进行 Google Ping 测试，筛选出可连接的节点。对这些节点进行速度测试，择优选出。*
 
-**同时，本项目有独特的共享模式，每位网友的测速结果将被保存到云端，通过 Github Action 自动化选择出适合三网的节点供大家订阅。人人为我，我为人人，有条件的朋友不妨下载软件一键测速，分享你们的测速结果！**
+*本项目目前支持的节点协议有：ShadowSocks(R), Vmess, Trojan。*
+
+*同时，本项目有独特的**共享模式**，每位网友的测速结果将被保存到云端，通过 Github Action **自动化选择出适合三网的节点**供大家订阅。*
+
+***人人为我，我为人人**，有条件的朋友不妨**下载软件一键测速**，**分享你们的测速结果！***
+
+**软件 Release（已编译，无需 Python 环境）**：**[点击查看](https://github.com/gfwcross/v2pool/releases/) | [软件下载](http://f6z.cn/2M8bs)**
 
 --------
 
@@ -12,9 +18,9 @@
 
 以下为 `base64` 订阅，适用于 `v2rayN`, `Clash for Android` 等客户端。
 
-- 电信：`https://nodes.gfwcross.tech/chinanet.txt`
-- 移动：`https://nodes.gfwcross.tech/chinamobile.txt`
-- 联通：`https://nodes.gfwcross.tech/chinaunicom.txt`
+- **电信**：`https://nodes.gfwcross.tech/chinanet.txt`
+- **移动**：`https://nodes.gfwcross.tech/chinamobile.txt`
+- **联通**：`https://nodes.gfwcross.tech/chinaunicom.txt`
 
 -----
 
