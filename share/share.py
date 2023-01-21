@@ -64,16 +64,20 @@ def transfersh(file_path):
     return res
 
 
-def generatejson(running, good, low_delay, resultjson, local_speed, region, isp):
+def generatejson(running, running_num, good, good_num, 
+    low_delay, resultjson, local_speed, region, isp):
     res = {
         "running": running,
+        "running_num": running_num,
         "good": good,
+        "good_num": good_num,
         "low_delay": low_delay,
         "resultjson": resultjson,
         "local_speed": local_speed,
         "region": region,
         "isp": isp,
-        "time": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        "time": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+        "uploadTimestamp": int(time.time() * 1000)
     }
     # 随机生成一个 uuid
     filename = str(uuid.uuid4()) + ".json"

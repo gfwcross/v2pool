@@ -119,6 +119,17 @@ if __name__ == '__main__':
         f.write(base64.b64encode('\n'.join(low_delay_nodes).encode('utf-8')).decode('utf-8'))
     console.log("已导出速度优秀节点至 ./share/good.txt")
     console.log("已导出延迟优秀节点至 ./share/low_delay.txt")
+    
+    good_nodes_num = len(good_nodes)
+    low_delay_nodes_num = len(low_delay_nodes)
+    running_nodes_num = len(live_nodes)
+    table = Table(show_header=True, header_style="bold magenta")
+    table.add_column("节点总数", justify="center", style="dim", no_wrap=True)
+    table.add_column("可用节点", justify="center", style="dim", no_wrap=True)
+    table.add_column("速度优秀", justify="center", style="dim", no_wrap=True)
+    table.add_column("延迟优秀", justify="center", style="dim", no_wrap=True)
+    table.add_row(str(len(res["nodes"])), str(running_nodes_num), 
+        str(good_nodes_num), str(low_delay_nodes_num))
 
 ## 节点共享
     console.rule("[bold red]节点共享：人人为我，我为人人")
@@ -139,7 +150,9 @@ if __name__ == '__main__':
     result  = share.transfersh('./share/result.json')
     console.log("上传测速结果文件 ==> [bold red]%s[/bold red]"%result)
 
-    sh = share.generatejson(running, good, delay, result, "...", info['regionName'], info['isp'])
+    sh = share.generatejson(running, running_nodes_num, good, 
+        good_nodes_num, delay, result, "...", 
+        info['regionName'], info['isp'])
 
     console.log("正在上传分享链接到云端...")
     bb = share.backblaze("005dd61b9ce80da0000000001", 

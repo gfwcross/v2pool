@@ -14,8 +14,11 @@ class benchmark:
         obj = subprocess.Popen(["./bench/stairspeedtest"], stdin=subprocess.PIPE, 
             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         obj.stdin.write(bytes(url, encoding='gbk'))
-        obj.communicate(timeout = 20)
-        os.killpg(obj.pid, signal.SIGTERM)
+        try:
+            obj.communicate(timeout = 25)
+        except subprocess.TimeoutExpired:
+            os.system('taskkill /t /f /pid {}'.format(obj.pid))
+            return None
         # 寻找文件夹下最新的日志文件
         path = "./bench/logs"
         lists = os.listdir(path)
