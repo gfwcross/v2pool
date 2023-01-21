@@ -76,6 +76,7 @@ if __name__ == '__main__':
         console.log('测试完成！')
     else:
         console.log('已跳过测试！')
+    
     if os.path.exists('./out.json'):
         shutil.move('./out.json', './share/lite.json')
     with open('./share/lite.json', 'r', encoding = "utf-8") as f:
@@ -91,7 +92,6 @@ if __name__ == '__main__':
         all_nodes += per + '\n'
     with open('./share/running.txt', 'w') as f:
         f.write(base64.b64encode(all_nodes.encode('utf-8')).decode('utf-8'))
-    
     console.log("已导出可用节点至 ./share/running.txt")
 
 ## 测试本地速度

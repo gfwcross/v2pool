@@ -39,4 +39,5 @@
 - 本项目的灵感来源：[aiirobyte/TopFreeProxies](https://github.com/aiirobyte/TopFreeProxies)
 - 关联项目：[LiteSpeedTest](https://github.com/xxf098/LiteSpeedTest) | [StairSpeedTest](https://github.com/tindy2013/stairspeedtest-reborn) | [SubConverter](https://github.com/tindy2013/subconverter)
 - 关联 API：[ip-api.com](https://ip-api.com/) | [sub.v1.mk](https://sub.v1.mk)
+- 云端存储 (OSS) ：[BackBlaze](https://backblaze.com)
 - **作者本人中学在读，忙于学业。会尽量在假期保持更新！**

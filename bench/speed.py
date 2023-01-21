@@ -1,4 +1,4 @@
-import subprocess, os, re, json, socket, base64, time
+import subprocess, os, re, json, socket, base64, time, signal
 
 class benchmark:
 
@@ -10,15 +10,12 @@ class benchmark:
 
     def test_per_node(self, url):
         # 调用 stairspeedtest 测试
+        # https://blog.csdn.net/jiandanokok/article/details/104853593
         obj = subprocess.Popen(["./bench/stairspeedtest"], stdin=subprocess.PIPE, 
             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         obj.stdin.write(bytes(url, encoding='gbk'))
-        obj.communicate()
-        code = obj.wait()
-        if (code != 0):
-            return None
-        time.sleep(1)
-        obj.kill()
+        obj.communicate(timeout = 20)
+        os.killpg(obj.pid, signal.SIGTERM)
         # 寻找文件夹下最新的日志文件
         path = "./bench/logs"
         lists = os.listdir(path)
