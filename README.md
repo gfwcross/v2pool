@@ -53,3 +53,8 @@
 - 关联 API：[ip-api.com](https://ip-api.com/) | [sub.v1.mk](https://sub.v1.mk)
 - 云端存储 (OSS) ：[BackBlaze](https://backblaze.com)
 - **作者本人中学在读，忙于学业。会尽量在假期保持更新！**
+
+### Star History 点亮项目星星！
+
+[![Star History Chart](https://api.star-history.com/svg?repos=gfwcross/v2pool&type=Date)](https://star-history.com/#gfwcross/v2pool&Date)
+
