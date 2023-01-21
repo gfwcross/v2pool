@@ -1,4 +1,3 @@
 rich
 requests
-python-gitlab
 speedtest-cli
