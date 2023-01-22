@@ -42,7 +42,8 @@
 - [ronghuaxueleng/get_v2](https://github.com/ronghuaxueleng/get_v2)
 - [kxswa/k](https://github.com/kxswa/k)
 - [Nodefree.org](https://github.com/Fukki-Z/nodefree)
-- [ClashNode](https://clashnode.com/f/freenode)
+- [Clashnode.com](https://clashnode.com/f/freenode)
+- [cdddbc/getAirport](https://github.com/cdddbc/getAirport)
 
 ----------
 

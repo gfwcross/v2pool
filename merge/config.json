@@ -65,10 +65,18 @@
     },
     {
         "id": 8,
-        "remarks": "ClashNode",
+        "remarks": "Clashnode.com",
         "site": "https://clashnode.com/f/freenode",
         "url": "https://clashnode.com/wp-content/uploads/2023/01/20230121.txt",
         "update_method": "change_date",
+        "enabled": true
+    },
+    {
+        "id": 9,
+        "remarks": "cdddbc/getAirport",
+        "site": "https://github.com/cdddbc/getAirport",
+        "url": "https://raw.githubusercontent.com/cdddbc/getAirport/main/sub/miningUrl64",
+        "update_method": "auto",
         "enabled": true
     }
 ]
