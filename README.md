@@ -56,5 +56,4 @@
 
 ### Star History 点亮项目星星！
 
-[![Star History Chart](https://api.star-history.com/svg?repos=gfwcross/v2pool&type=Date)](https://star-history.com/#gfwcross/v2pool&Date)
-
+[![Stargazers over time](https://starchart.cc/gfwcross/v2pool.svg)](https://starchart.cc/gfwcross/v2pool)
