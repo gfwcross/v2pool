@@ -65,7 +65,7 @@ def transfersh(file_path):
 
 
 def generatejson(running, running_num, good, good_num, 
-    low_delay, resultjson, local_speed, region, isp):
+    low_delay, resultjson, local_speed, region, isp, detail):
     res = {
         "running": running,
         "running_num": running_num,
@@ -77,6 +77,7 @@ def generatejson(running, running_num, good, good_num,
         "region": region,
         "isp": isp,
         "time": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+        "detail": detail,
         "uploadTimestamp": int(time.time() * 1000)
     }
     # 随机生成一个 uuid
@@ -86,9 +87,4 @@ def generatejson(running, running_num, good, good_num,
     return filename
 
 if __name__ == '__main__':
-    # bb = backblaze("005dd61b9ce80da0000000001", 
-    #     "K005kfqpEhTHh78tpCA1pjHDq7BvMwk", 
-    #     "0d7d26114b59ccfe88500d1a")
-    # bb.get_auth()
-    # bb.upload_file("./main.py")
     pass

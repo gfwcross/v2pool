@@ -3,7 +3,7 @@
         "id": 0,
         "remarks": "pojiezhiyuanjun/freev2",
         "site": "https://github.com/pojiezhiyuanjun/freev2",
-        "url": "https://gcore.jsdelivr.net/gh/pojiezhiyuanjun/freev2/0121clash.yml",
+        "url": "https://gcore.jsdelivr.net/gh/pojiezhiyuanjun/freev2/0124clash.yml",
         "update_method": "change_date",
         "enabled": true
     },
@@ -59,7 +59,7 @@
         "id": 7,
         "remarks": "Nodefree.org",
         "site": "https://github.com/Fukki-Z/nodefree",
-        "url": "https://nodefree.org/dy/202301/20230121.txt",
+        "url": "https://nodefree.org/dy/202301/20230124.txt",
         "update_method": "change_date",
         "enabled": true
     },
@@ -67,7 +67,7 @@
         "id": 8,
         "remarks": "Clashnode.com",
         "site": "https://clashnode.com/f/freenode",
-        "url": "https://clashnode.com/wp-content/uploads/2023/01/20230121.txt",
+        "url": "https://clashnode.com/wp-content/uploads/2023/01/20230124.txt",
         "update_method": "change_date",
         "enabled": true
     },

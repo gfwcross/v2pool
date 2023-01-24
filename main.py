@@ -14,7 +14,7 @@ import configparser
 import os
 import shutil
 import time
-
+from netspeedtest import sp
 
 def speedtest_runner():
     table = Table()
@@ -51,6 +51,7 @@ def speedtest_runner():
 
 
 if __name__ == '__main__':
+    os.environ["NO_PROXY"] = '*'
 
     console = Console()
 
@@ -96,14 +97,12 @@ if __name__ == '__main__':
 
 ## 测试本地速度
     console.rule("[bold red]本地互联网速度测试")
-    # st = speedtest.Speedtest()
-    # st.get_best_server()
-    # local_speed = st.download() / 1024 / 1024 / 8
-    # console.log("本地互联网速度：[bold red]%.1f MB/s[/bold red]" % local_speed)
-    good = 4
-    # if (local_speed < 10):
-    #     good = local_speed * 0.5
-    console.log("\n\n")
+    localnetspeed = sp.speedtest()
+    console.log("本地互联网速度：%.1f MB/s"%localnetspeed)
+    mbps = int(localnetspeed * 8)
+    if localnetspeed < 20: good = localnetspeed * 0.4 
+    else: good = 8
+    console.log("期望的节点速度: %.1f MB/s"%good)
 
 ## 打开json，跑 speedtest，输出为 result.json
     console.rule("[bold red]节点速度测试")
@@ -136,10 +135,18 @@ if __name__ == '__main__':
     
     console.log("获取本地网络信息...")
     proxies = { "http": None, "https": None}
-    r = requests.get("http://ip-api.com/json/", proxies=proxies)
+    try:
+        r = requests.get("http://ip-api.com/json/", proxies=proxies)
+    except:
+        info = {'regionName': "未知", 'isp': "未知"}
     info = json.loads(r.text)
-    console.log("地区：[bold red]%s[/bold red]" % info['regionName'])
-    console.log("运营商：[bold red]%s[/bold red]" % info['isp'])
+    local_ip = info['query']
+    url = "http://opendata.baidu.com/api.php?query=%s&resource_id=6006&oe=utf8"%local_ip
+    r = requests.get(url, proxies=proxies)
+    detail = json.loads(r.text)['data'][0]['location']
+    if (detail.find("移动") != -1): info['isp'] = "Chinamobile"
+    if (detail.find("联通") != -1): info['isp'] = "Chinaunicom"
+    if (detail.find("电信") != -1): info['isp'] = "Chinanet"
 
     running = share.transfersh('./share/running.txt')
     console.log("上传所有可用节点 ==> [bold red]%s[/bold red]"%running)
@@ -151,11 +158,12 @@ if __name__ == '__main__':
     console.log("上传测速结果文件 ==> [bold red]%s[/bold red]"%result)
 
     sh = share.generatejson(running, running_nodes_num, good, 
-        good_nodes_num, delay, result, "...", 
-        info['regionName'], info['isp'])
+        good_nodes_num, delay, result, mbps, 
+        info['regionName'], info['isp'], detail)
 
     console.log("正在上传分享链接到云端...")
-    bb = share.backblaze("005dd61b9ce80da0000000001", 
+    bb = share.backblaze(
+        "005dd61b9ce80da0000000001", 
         "K005kfqpEhTHh78tpCA1pjHDq7BvMwk", 
         "0d7d26114b59ccfe88500d1a")
     bb.get_auth()
@@ -165,6 +173,7 @@ if __name__ == '__main__':
     else:
         console.log("上传失败，您仍然可以使用 transfer.sh 链接订阅。")
 
+    console.log("按 Ctrl+C 退出程序或关闭窗口。")
 # 一直等待
 time.sleep(2147483647)
 
