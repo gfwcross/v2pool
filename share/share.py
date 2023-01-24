@@ -65,7 +65,7 @@ def transfersh(file_path):
 
 
 def generatejson(running, running_num, good, good_num, 
-    low_delay, resultjson, local_speed, region, isp, detail):
+    low_delay, resultjson, mbps, local_speed, region, isp, detail):
     res = {
         "running": running,
         "running_num": running_num,
@@ -76,6 +76,7 @@ def generatejson(running, running_num, good, good_num,
         "local_speed": local_speed,
         "region": region,
         "isp": isp,
+        "netspeed": mbps,
         "time": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
         "detail": detail,
         "uploadTimestamp": int(time.time() * 1000)
