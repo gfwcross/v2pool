@@ -72,7 +72,7 @@ class benchmark:
             return self.country_translate(bound2.get('country_code')) + ' ' + self.isp_translate(bound2.get('isp'))
         if (bound2 == None):
             return self.country_translate(bound1.get('country_code')) + ' ' + self.isp_translate(bound1.get('isp'))
-        # 若 inboundip 为域名，则获取域名的 ip 地址
+        # 若 ip 为域名，则获取域名的 ip 地址
         if (re.match(r'.*[a-zA-Z]+.*', inboundip)):
             inboundip = socket.gethostbyname(inboundip)
         # 判定出入口节点
@@ -89,7 +89,7 @@ class benchmark:
             return self.country_translate(inbound.get('country_code')) + inbound.get('isp')
         # CF CDN 节点
         if (inbound.get('isp').find('Cloudflare') != -1):
-            return 'CF > ' + \
+            return 'CF -> ' + \
                 self.country_translate(outbound.get('country_code')) + self.isp_translate(outbound.get('isp'))
         # 中转节点
         return self.country_translate(inbound.get('country_code')) + ' -> ' + \
@@ -131,15 +131,10 @@ class benchmark:
         result = self.test_per_node(url)
         if (result == None):
             return None, None, None
-        
-        if (result[0] == None):
-            bound1 = None
-        else:
-            bound1 = json.loads(result[0])
-        if (result[1] == None):
-            bound2 = None
-        else:
-            bound2 = json.loads(result[1])
+        if (result[0] == None): bound1 = None
+        else: bound1 = json.loads(result[0])
+        if (result[1] == None): bound2 = None
+        else: bound2 = json.loads(result[1])
         speed = result[2]
 
         # 重命名节点

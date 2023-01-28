@@ -174,6 +174,7 @@ if __name__ == '__main__':
         console.log("上传失败，您仍然可以使用 transfer.sh 链接订阅。")
 
     console.log("按 Ctrl+C 退出程序或关闭窗口。")
-# 一直等待
+
+## 一直等待
 time.sleep(2147483647)
 
